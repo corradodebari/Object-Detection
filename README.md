@@ -85,7 +85,7 @@ where:
 ```
 ## 6. Training
 With docker container running (if not, start it with command: *#docker start [container_name]* )
-```
+```bash
 #docker exec container_name train.sh [num_classes] [num_epochs] [learning_rate] 
 ```
 where:  
@@ -102,12 +102,12 @@ where:
 
 ## 7. Test
 To test, run jupyter notebook on port 8888:
-```
-    #nvidia-docker exec container_name inference.sh
+```bash
+#nvidia-docker exec container_name inference.sh
 ```
 **Example**:
-```
-    #nvidia-docker exec objdetect1 inference.sh
+```bash
+#nvidia-docker exec objdetect1 inference.sh
 ```
 Get the Jupyter Notebook ID and run the test notebook. Upload the images you want to test into directory: 
 **/test_images**
