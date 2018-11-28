@@ -1,6 +1,6 @@
 # Object-Detection
 Docker image for object detection, based on Google Tensorflow Object Detection API, to train on your own dataset.  
-I've approached months ago the Object Detection through Mask R-CNN but, even if with standard COCO pre-trained dataset it's easy to experiment and apply this deep learning network model, I've found actually more tricky to train on my own dataset than single object recognition models.  
+I've approached months ago the Object Detection through Faster R-CNN but, even if with standard COCO pre-trained dataset it's easy to experiment and apply this deep learning network model, I've found actually more tricky to train on my own dataset than single object recognition models.  
 So, inspired by tutorials like: ["How To Train an Object Detection Classifier for Multiple Objects Using TensorFlow (GPU) on Windows 10"](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10#3-gather-and-label-pictures) I've defined a Docker image to simplify the training phase.    
 To proceed you need to follow these steps:
 
