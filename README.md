@@ -1,8 +1,7 @@
 # Object-Detection
 Docker image for object detection, based on Google Tensorflow Object Detection API, to train on your own dataset.  
 I've approached months ago the Object Detection through Mask R-CNN but, even if with standard COCO pre-trained dataset it's easy to experiment and apply this deep learning network model, I've found actually more tricky to train on my own dataset than single object recognition models.  
-So, inspired by tutorials like: ["How To Train an Object Detection Classifier for Multiple Objects Using TensorFlow (GPU) on Windows 10"](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10#3-gather-and-label-pictures)  
-I've defined a Docker image to simplify the training phase. 
+So, inspired by tutorials like: ["How To Train an Object Detection Classifier for Multiple Objects Using TensorFlow (GPU) on Windows 10"](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10#3-gather-and-label-pictures) I've defined a Docker image to simplify the training phase. 
 To proceed you need to follow these steps:
 
 ## 1. Get a Cloud Node
@@ -41,7 +40,7 @@ where:
 * **image_name**: is optional, by default is "objdetect", and represent the image name in your local Docker repository
 
 ## 4. Prepare dataset
-With a tool like https://github.com/tzutalin/labelImg [LabelImg](https://github.com/tzutalin/labelImg) or [RectLabel](https://rectlabel.com)
+With a tool like [LabelImg](https://github.com/tzutalin/labelImg) or [RectLabel](https://rectlabel.com)
 prepare a training and test dataset in PASCAL VOC XML format, the format used by ImageNet.
 Put files in the following directories:
 ```
@@ -65,7 +64,7 @@ item {
 ```
 *Name*s values, i.e. *class_1*, *class_2*, etc., must match with the class names used with LabelImg tools to label the objects.
 
-**NOTE**: do not create any other subdirectories for classes. Put the images files + xmls label files straight into /test and /training 
+**NOTE**: do not create any other subdirectories for classes. Put the image files + xml label files straight into /test and /training 
 directories, otherwise they will be ignored
 
 ## 5. Run container
@@ -77,21 +76,21 @@ where:
 * **local_dir**: to share artifacts in host with container   
 * **local_dataset_dir**: directory in which stores training/test Pascal VOC dataset   
 * **container_name**: container name to simplify operations  
-* **image_name**: image name provided at step (**3**)  
+* **image_name**: image name provided at step [**3**]  
 
 **Example:**
 ```
 #nvidia-docker run -it -d -v /home/ubuntu:/shared -v /home/ubuntu/dataset:/images -p 8888:8888 -p 6006:6006 --name objdetect1 -t objdetect
 ```
 ## 6. Training
-With docker container running (if not start with command: *#docker start [container_name]* )
+With docker container running (if not, start it with command: *#docker start [container_name]* )
 ```
 #docker exec container_name train.sh [num_classes] [num_epochs] [learning_rate] 
 ```
 where:  
 * **container_name**: name previously set   
 * **num_classes**: number of classes   
-* **num_epochs**: number of learning iteriation steps   
+* **num_epochs**: number of learning iteration steps   
 * **learning_rate**: optional, by default 0.0002  
 
 Example:
@@ -105,7 +104,7 @@ To test, run jupyter notebook on port 8888:
 ```
     #nvidia-docker exec container_name inference.sh
 ```
-Example:
+**Example**:
 ```
     #nvidia-docker exec objdetect1 inference.sh
 ```
