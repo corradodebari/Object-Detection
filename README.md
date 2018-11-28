@@ -1,7 +1,7 @@
 # Object-Detection
 Docker image for object detection, based on Google Tensorflow Object Detection API, to train on your own dataset.  
 I've approached months ago the Object Detection through Mask R-CNN but, even if with standard COCO pre-trained dataset it's easy to experiment and apply this deep learning network model, I've found actually more tricky to train on my own dataset than single object recognition models.  
-So, inspired by tutorials like: ["How To Train an Object Detection Classifier for Multiple Objects Using TensorFlow (GPU) on Windows 10"](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10#3-gather-and-label-pictures) I've defined a Docker image to simplify the training phase. 
+So, inspired by tutorials like: ["How To Train an Object Detection Classifier for Multiple Objects Using TensorFlow (GPU) on Windows 10"](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10#3-gather-and-label-pictures) I've defined a Docker image to simplify the training phase.    
 To proceed you need to follow these steps:
 
 ## 1. Get a Cloud Node
@@ -10,8 +10,9 @@ Get a certified cloud image for [NVIDIA GPU Cloud](https://ngc.nvidia.com) on [O
 * US: us-ashburn-1  
 ocid1.image.oc1.iad.aaaaaaaaikn6ub6heefqxbe5fkiv4otbfe6ivza6y7di5khnkxkyvf2bkdta
 * EU: eu-frankfurt-1  
-ocid1.image.oc1.eu-frankfurt-1.aaaaaaaauwuafl6uze6bnusphnn6y2mr5y7ajavx4kza7glyrqggxlnbo4zq  
-These are Ubuntu 16.04.3 images, with nvidia-docker pre-configured to use GPUs shape.
+ocid1.image.oc1.eu-frankfurt-1.aaaaaaaauwuafl6uze6bnusphnn6y2mr5y7ajavx4kza7glyrqggxlnbo4zq    
+
+These are Ubuntu 16.04.3 images, with **nvidia-docker** pre-configured to use GPU shapes.
 
 ## 2. Github project download
 With command:
@@ -93,7 +94,7 @@ where:
 * **num_epochs**: number of learning iteration steps   
 * **learning_rate**: optional, by default 0.0002  
 
-Example:
+**Example**:
 ```
     #nvidia-docker exec objdetect1 train.sh 1 40000 0.0001
 ```
@@ -112,5 +113,6 @@ Get the Jupyter Notebook ID and run the test notebook. Upload the images you wan
 **/test_images**
 
 **NOTE**:
-You can re-train the model as many times as you want, returning on step [**6**] if you aren't satisfied by detection error rate. At the end you can find the trained frozen model ".pb" into:  
-#*local_dataset_dir*/inference_graph/frozen_inference_graph.pb
+You can re-train the model as many times as you want, returning on step [**6**] if you aren't satisfied by detection error rate. At the end you can find the trained frozen model ".pb" into:   
+  
+*local_dataset_dir*/inference_graph/frozen_inference_graph.pb
