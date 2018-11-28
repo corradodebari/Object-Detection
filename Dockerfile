@@ -1,7 +1,7 @@
 # Set the base image
 FROM nvcr.io/nvidia/tensorflow:18.04-py2
 # Dockerfile author / maintainer 
-MAINTAINER Name <corrado.de.bari@oracle.com> 
+MAINTAINER Name <corradodebari@gmail.com> 
 # Update application repository list and install the Redis server. 
 RUN apt-get update 
 RUN apt-get install git 
