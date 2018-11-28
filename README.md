@@ -30,7 +30,11 @@ Into docker directory you'll find:
 * **faster_rcnn_inception_v2_pets.config.orig**
 * **object_detection_tutorial-custom.ipynb**
 
-eventually you may tune the model config file **faster_rcnn_inception_v2_pets.config.orig**.
+eventually you may tune the model config file **faster_rcnn_inception_v2_pets.config.orig**.  
+Set permission on script files running:
+```
+#chmod 755 *.sh
+```
 
 ## 3. Build the Docker Image
 In */Object-Detection* directory build a local Docker image:
