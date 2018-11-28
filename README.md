@@ -20,14 +20,14 @@ With command:
 ```
 download into the cloud node this GitHub projects.
 Into docker directory you'll find:
-**Dockerfile     
-**build.sh                         
-**setup.sh
-**train.sh
-**inference.sh
-**build.sh
-**faster_rcnn_inception_v2_pets.config.orig
-**object_detection_tutorial-custom.ipynb
+* **Dockerfile     
+* **build.sh                         
+* **setup.sh
+* **train.sh
+* **inference.sh
+* **build.sh
+* **faster_rcnn_inception_v2_pets.config.orig
+* **object_detection_tutorial-custom.ipynb
 
 eventually you may tune the model config file **faster_rcnn_inception_v2_pets.config.orig**
 
@@ -72,9 +72,9 @@ directories, otherwise they will be ignored
 ```
 
 where:  
-**local_dir**: to share artifacts in host with container   
-**local_dataset_dir**: directory in which stores training/test Pascal VOC dataset   
-**container_name**: container name to simplify operations  
+* **local_dir**: to share artifacts in host with container   
+* **local_dataset_dir**: directory in which stores training/test Pascal VOC dataset   
+* **container_name**: container name to simplify operations  
 
 **Example:**
 ```
@@ -86,10 +86,10 @@ With docker container running (if not start with command: *#docker start [contai
 #docker exec container_name train.sh num_classes num_epochs [learning_rate] 
 ```
 where:  
-***container_name**: name previously set   
-***num_classes**: number of classes   
-***num_epochs**: number of learning iteriation steps   
-***learning_rate**: by default 0.0002  
+* **container_name**: name previously set   
+* **num_classes**: number of classes   
+* **num_epochs**: number of learning iteriation steps   
+* **learning_rate**: by default 0.0002  
 
 Ex:
 ```
