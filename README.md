@@ -7,12 +7,12 @@ To proceed you need to follow these steps:
 ## 1. Get a Cloud Node
 Get a certified cloud image for [NVIDIA GPU Cloud](https://ngc.nvidia.com) on [Oracle Cloud Infrastructure](https://docs.cloud.oracle.com/iaas/Content/Compute/References/ngcimage.htm):
 
-* US: us-ashburn-1  
-ocid1.image.oc1.iad.aaaaaaaaikn6ub6heefqxbe5fkiv4otbfe6ivza6y7di5khnkxkyvf2bkdta
-* EU: eu-frankfurt-1  
-ocid1.image.oc1.eu-frankfurt-1.aaaaaaaauwuafl6uze6bnusphnn6y2mr5y7ajavx4kza7glyrqggxlnbo4zq    
+* US Region: **us-ashburn-1** 
+*ocid1.image.oc1.iad.aaaaaaaaikn6ub6heefqxbe5fkiv4otbfe6ivza6y7di5khnkxkyvf2bkdta*
+* EU Region: **eu-frankfurt-1**  
+*ocid1.image.oc1.eu-frankfurt-1.aaaaaaaauwuafl6uze6bnusphnn6y2mr5y7ajavx4kza7glyrqggxlnbo4zq*    
 
-These are Ubuntu 16.04.3 images, with **nvidia-docker** pre-configured to use GPU shapes.
+These are Ubuntu 16.04.3 images, with **nvidia-docker** pre-configured to use GPU shapes: no other configurations needed.
 
 ## 2. Github project download
 With command:
@@ -30,7 +30,7 @@ Into docker directory you'll find:
 * **faster_rcnn_inception_v2_pets.config.orig**
 * **object_detection_tutorial-custom.ipynb**
 
-eventually you may tune the model config file **faster_rcnn_inception_v2_pets.config.orig**
+eventually you may tune the model config file **faster_rcnn_inception_v2_pets.config.orig**.
 
 ## 3. Build the Docker Image
 In */Object-Detection* directory build a local Docker image:
@@ -75,7 +75,7 @@ directories, otherwise they will be ignored
 
 where:  
 * **local_dir**: to share artifacts in host with container   
-* **local_dataset_dir**: directory in which stores training/test Pascal VOC dataset   
+* **local_dataset_dir**: directory in which it will be found the training/test Pascal VOC dataset   
 * **container_name**: container name to simplify operations  
 * **image_name**: image name provided at step [**3**]  
 
