@@ -86,10 +86,10 @@ With docker container running (if not start with command: *#docker start [contai
 #docker exec container_name train.sh num_classes num_epochs [learning_rate] 
 ```
 where:  
-**container_name**: name previously set   
-**num_classes**: number of classes   
-**num_epochs**: number of learning iteriation steps   
-**learning_rate**: by default 0.0002  
+***container_name**: name previously set   
+***num_classes**: number of classes   
+***num_epochs**: number of learning iteriation steps   
+***learning_rate**: by default 0.0002  
 
 Ex:
 ```
