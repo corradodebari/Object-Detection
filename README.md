@@ -42,7 +42,7 @@ In */Object-Detection* directory build a local Docker image:
 #./build.sh [image_name]
 ```
 where:
-* **image_name**: is optional, by default is "objdetect", and represent the image name in your local Docker repository
+* **image_name**: is optional, by default is "objdetect", and represents the image name in your local Docker repository
 
 ## 4. Prepare dataset
 With a tool like [LabelImg](https://github.com/tzutalin/labelImg) or [RectLabel](https://rectlabel.com)
